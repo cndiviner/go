@@ -1,0 +1,18 @@
+{{define "user/userlist.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{range .}}
+{{.}}
+{{end}}
+<br/>
+{{range $i,$v :=.}}
+{{$i}}===={{$v.Id}},{{$v.Name}}<br/>
+{{end}}
+</body>
+</html>
+{{end}}

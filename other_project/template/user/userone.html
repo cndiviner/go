@@ -1,0 +1,18 @@
+{{define "user/userone.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{range .}}
+{{.}}
+{{end}}
+<br/>
+{{range $i,$v :=.}}
+{{$i}}===={{$v}}<br/>
+{{end}}
+</body>
+</html>
+{{end}}

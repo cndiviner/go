@@ -1,0 +1,25 @@
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> main.main.func1 (2 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2021/07/03 - 12:15:52 | 200 |      95.632µs |       127.0.0.1 | GET      "/test?name=leifei"
+[GIN] 2021/07/03 - 12:16:27 | 404 |         272ns |       127.0.0.1 | GET      "/api/overview"
+[GIN] 2021/07/03 - 12:16:27 | 404 |         297ns |       127.0.0.1 | GET      "/api/http/services?search=&status=&per_page=10&page=1"
+[GIN] 2021/07/03 - 12:17:27 | 404 |         436ns |       127.0.0.1 | GET      "/api/overview"
+[GIN] 2021/07/03 - 12:17:27 | 404 |         295ns |       127.0.0.1 | GET      "/api/http/services?search=&status=&per_page=10&page=1"
+[GIN] 2021/07/03 - 12:18:27 | 404 |         191ns |       127.0.0.1 | GET      "/api/overview"
+[GIN] 2021/07/03 - 12:18:27 | 404 |         181ns |       127.0.0.1 | GET      "/api/http/services?search=&status=&per_page=10&page=1"
+[GIN] 2021/07/03 - 12:19:27 | 404 |         454ns |       127.0.0.1 | GET      "/api/overview"
+[GIN] 2021/07/03 - 12:19:27 | 404 |         263ns |       127.0.0.1 | GET      "/api/http/services?search=&status=&per_page=10&page=1"
+[GIN] 2021/07/03 - 12:20:27 | 404 |         197ns |       127.0.0.1 | GET      "/api/overview"
+[GIN] 2021/07/03 - 12:20:27 | 404 |         246ns |       127.0.0.1 | GET      "/api/http/services?search=&status=&per_page=10&page=1"
+[GIN] 2021/07/03 - 12:21:27 | 404 |         243ns |       127.0.0.1 | GET      "/api/overview"
+[GIN] 2021/07/03 - 12:21:27 | 404 |         201ns |       127.0.0.1 | GET      "/api/http/services?search=&status=&per_page=10&page=1"
+[GIN] 2021/07/03 - 12:22:27 | 404 |         568ns |       127.0.0.1 | GET      "/api/overview"
+[GIN] 2021/07/03 - 12:22:27 | 404 |         336ns |       127.0.0.1 | GET      "/api/http/services?search=&status=&per_page=10&page=1"
+[GIN] 2021/07/03 - 12:23:27 | 404 |         264ns |       127.0.0.1 | GET      "/api/overview"
+[GIN] 2021/07/03 - 12:23:27 | 404 |         239ns |       127.0.0.1 | GET      "/api/http/services?search=&status=&per_page=10&page=1"
+[GIN] 2021/07/03 - 12:24:27 | 404 |         628ns |       127.0.0.1 | GET      "/api/overview"
+[GIN] 2021/07/03 - 12:24:27 | 404 |         282ns |       127.0.0.1 | GET      "/api/http/services?search=&status=&per_page=10&page=1"

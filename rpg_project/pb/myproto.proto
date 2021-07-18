@@ -1,0 +1,33 @@
+syntax = "proto3";
+package pb;
+
+//枚举
+enum Week{
+  Monday = 0;
+  Turesday = 1;
+}
+
+message Student{
+  int32 age = 1;
+  string name = 2;
+  People p = 3;//嵌套
+  repeated int32 score = 4; //数组
+  Week w = 5;//枚举
+  //联合体
+  oneof data{
+    string teacher = 6;
+    string class = 7;
+  }
+
+
+}
+message People{
+  int32 weight = 1;
+
+}
+//添加rpc服务
+service bj38{
+  rpc Say(People) returns (Student);
+}
+//保存路径
+option go_package = "./";

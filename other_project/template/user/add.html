@@ -1,0 +1,46 @@
+{{define "user/add.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+添加数据
+<form method="Post" action="/addDo">
+    <input name="name" type="text"><br/>
+    <input name="age" type="text"><br/>
+    游泳：<input type="checkbox" name="love" value="游泳"><br/>
+    看书：<input type="checkbox" name="love" value="看书"><br/>
+    旅游：<input type="checkbox" name="love" value="旅游"><br/>
+    爬山：<input type="checkbox" name="love" value="爬山"><br/>
+    <br/>
+    <input type="submit">
+</form>
+
+<script>
+    function PostHandle(url,data,callback) {
+        $.ajax({
+            type: "Post",
+            url:url,
+            data:data,
+            dataType:'json',
+            async: false,
+            success: callback
+        });
+    }
+
+    var arr={
+        "name":"leifei",
+        "age":"23"
+    }
+
+    PostHandle("/addDo",{ "arr":JSON.stringify(arr)},function(result){
+        console.log(result)
+    });
+</script>
+</body>
+</html>
+{{end}}

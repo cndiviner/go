@@ -1,0 +1,12 @@
+syntax="proto3";
+package pb;
+message Project{
+  string name=1;
+  int32 project_id=2;
+}
+//添加 rpc服务
+service hello{
+  rpc sayHello (Project) returns (Project);
+}
+//保存路径
+option go_package = "./";
